@@ -4,33 +4,29 @@ class LightDarkmode extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      stateData: "State Value",
-      backgroundColor: "white", // Initial background color
+      isDarkMode: false,
     };
   }
 
-  btnClickMethodInClassArrow = () => {
-    // Toggle the background color between "red" and "white"
-    const newColor =
-      this.state.backgroundColor === "white" ? "black" : "white";
-
-    // Update the background color
-    this.setState({ backgroundColor: newColor });
-
-    // Apply the background color to the body element
-    document.body.style.backgroundColor = newColor;
+  toggleDarkMode = () => {
+    this.setState((prevState) => ({ isDarkMode: !prevState.isDarkMode }));
   };
 
   render() {
-    const { backgroundColor } = this.state;
-
+    const { isDarkMode } = this.state;
     return (
       <>
-        <div style={{ backgroundColor }}>
-          <button onClick={this.btnClickMethodInClassArrow}>Dark/Light
-            <i className="fa-solid fa-circle-half-stroke"></i>
+        <div className={`${isDarkMode ? 'dark-mode' : 'light-mode'}`}>
+
+          <button className="btn p-0 rounded-circle" onClick={this.toggleDarkMode}>
+            {isDarkMode ? <>
+              <img src="https://assets.codepen.io/210284/sun.png" alt="sun" />
+            </> : <>
+              <img src="https://assets.codepen.io/210284/moon.png" alt="moon" />
+            </>}
           </button>
-        </div>
+
+        </div >
       </>
     );
   }
