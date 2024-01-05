@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import FunCompo from "../Component/Pages/FunCompo";
 // import HeaderCompo from "../Component/Pages/HeaderCompo"
 import Home from "../Component/Pages/Home";
+import Login from "../Component/Pages/Login.jsx";
 import About from "../Component/Pages/AboutCompo"
 import Example from "../Component/Pages/ExampleCompo"
 import Contact from "../Component/Pages/Contact"
@@ -19,9 +20,14 @@ const router = createBrowserRouter([
         path: "/",
         element: (<Home />)
     }, {
+        path: "/Login",
+        element: (<><HeaderCompo /><Login /></>)
+    },
+    {
         path: "/about",
         element: (<><HeaderCompo /><About /></>)
-    }, {
+    },
+    {
         path: "/contact",
         element: (<><HeaderCompo /><Contact /></>)
     }

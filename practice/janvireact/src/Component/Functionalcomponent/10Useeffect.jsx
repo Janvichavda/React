@@ -36,21 +36,38 @@ const UseEffectHooksInFunctionalCompo = () => {
     // },[refreshStatus])
     useEffect(() => {
         console.log("called useEffect");
-        fetch('https://fakestoreapi.com/products').then((res) => res.json()).then((result) => { 
+        fetch('https://fakestoreapi.com/products').then((res) => res.json()).then((result) => {
             console.log(result);
-            
+
         })
-        return ()=> {
+        return () => {
             console.log("called return");
         }
-    },[])
+    }, [])
     return (
         <>
+            <p> <b>The following situations in functional components allow for the use of the useEffect hook to carry out operations (or side effects):</b> <br />
+
+                when a component is rendered (componentDidMount function in class-based components).
+                when a component undergoes an update (componentDidUpdate function in class-based components).
+                before a component is unmounted or removed (componentWillUnmount function in class-based components).</p>
+            <p>How to write useEffect hooks in React <br />
+                <b>useEffect(()=>{
+
+                },[Dependency if any])</b>
+            </p>
+            <b> Assuming that the useEffect hook is active in our app, we can get this series of events to happen.</b>
+            <p>1.The user engages with the React app. <br />2.Let’s just say the user clicks a button on the UI.
+                <br />3.  The state of the components changes.
+                <br />4.  The DOM is then mutated.
+                <br />5.  Changes are then reflected on the browser screen.
+                The function is invoked to clean up effects from the previous render if useEffect dependencies have changed.
+                Following cleanup, the useEffect hook is invoked.</p>
             UseEffectHooksInFunctionalCompo
             <button onClick={() => { setCnt(counter + 1) }}>Increment {counter}</button>
             {/* <button onClick={() => { anything(secondState + 1) }}>Increment Other State Data {secondState}</button> */}
             <button onClick={() => { setRefreshStatus(!refreshStatus) }}>Refresh {JSON.stringify(refreshStatus)}</button>
-            
+
         </>
     );
 };

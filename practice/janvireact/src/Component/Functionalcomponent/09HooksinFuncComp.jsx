@@ -3,6 +3,9 @@ import React from 'react';
 const HooksInFunctionalCompo = () => {
     return (
         <>
+            <h2>What is Hooks?</h2>
+            <p>
+                In React, hooks are functions that allow functional components to use state and other React features. They were introduced in React 16.8 to enable functional components to have local component state, lifecycle methods, and other features previously available only in class components. Hooks are functions that you can use at the top level of your functional components to add state or other React features.</p>
             <p>Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class.</p>
             <p> This page describes the APIs for the built-in Hooks in React.</p>
             <p>If you’re new to Hooks, you might want to check out the overview first. You may also find useful information in the frequently asked questions section.</p>

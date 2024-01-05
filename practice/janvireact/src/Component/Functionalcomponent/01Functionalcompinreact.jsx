@@ -3,7 +3,11 @@ import React from 'react';
 const FunctionalComponentInReact = () => {
     return (
         <>
-            <p>testing Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil qui doloremque a amet quibusdam, ipsam provident voluptatibus possimus autem hic et magnam unde tenetur recusandae aliquid suscipit laborum voluptas pariatur? klore
+            <h2>What is a component function?</h2>
+            <p>
+                Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML. Components come in two types, Class components and Function components, in this tutorial we will concentrate on Function components.</p>
+            <h2>What is a functional component?</h2>
+            <p>React functional components are just normal JavaScript functions; we can create them using specific function keywords. Most developers create functional components using the Arrow function. The functional component's primary purpose is to render the view and the data to the browser.
             </p>
             <p>functional compo will created with <b>Syntax</b> </p>
             <div className="alert alert-info">

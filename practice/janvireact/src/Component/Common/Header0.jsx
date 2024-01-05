@@ -43,13 +43,16 @@ export default function App() {
               <Link className='nav-link' to="/">Home</Link>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <Link className='nav-link' to="/about">About</Link>              
+              <Link className='nav-link' to="/Login">Login</Link>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <Link className='nav-link' to="/contact">Contact</Link>              
+              <Link className='nav-link' to="/about">About</Link>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <Link className='nav-link' to="/examples">Examples</Link>              
+              <Link className='nav-link' to="/contact">Contact</Link>
+            </MDBNavbarItem>
+            <MDBNavbarItem>
+              <Link className='nav-link' to="/examples">Examples</Link>
             </MDBNavbarItem>
             <MDBNavbarItem>
               <MDBDropdown>
