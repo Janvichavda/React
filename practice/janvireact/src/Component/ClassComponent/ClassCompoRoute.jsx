@@ -4,6 +4,7 @@ import ComponentInReact from './ComponentinReact.jsx';
 import ClassComponentInReact from './ClassComponentinReact.jsx';
 import StateClassComponentInReact from './StateComponent.jsx'
 import Props from './PropsComponent.jsx'
+import Lifecycle from './Lifecycle.jsx'
 import Notfound from '../Common/Notfound.jsx'
 const ClassComponentRoute = () => {
     const routes = useRoutes([
@@ -24,6 +25,10 @@ const ClassComponentRoute = () => {
                 }, {
                     path: "props",
                     element: <Props />,
+                },
+                {
+                    path: "lifecycle",
+                    element: <Lifecycle />,
                 },
                 {
                     path: '*',

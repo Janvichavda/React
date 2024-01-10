@@ -18,7 +18,6 @@ const UseEffectHooksInFunctionalCompo = () => {
         console.log("called useLayoutEffect");
         fetch('https://fakestoreapi.com/products').then((res) => res.json()).then((result) => {
             console.log(result);
-
         })
         return () => {
             console.log("called return");
@@ -39,7 +38,6 @@ const UseEffectHooksInFunctionalCompo = () => {
             <button onClick={() => { setCnt(counter + 1) }}>Increment {counter}</button>
             {/* <button onClick={() => { anything(secondState + 1) }}>Increment Other State Data {secondState}</button> */}
             <button onClick={() => { setRefreshStatus(!refreshStatus) }}>Refresh {JSON.stringify(refreshStatus)}</button>
-
         </>
     );
 };

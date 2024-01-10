@@ -11,6 +11,7 @@ class ClassCompoMenu extends Component {
                 <li><Link to="classcomponent"> What is Class Component </Link></li>
                 <li><Link to="stateclasscomponent"> State in Class Component </Link></li>
                 <li><Link to="props"> Props in Class Component </Link></li>
+                <li><Link to="lifecycle"> Life Cycle in Class Component </Link></li>
               </ol>
 
                 <div className="row">

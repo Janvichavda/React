@@ -10,6 +10,9 @@ import RestVsSpreadComponentInReact from './08RestVsSpreadComp.jsx'
 import HooksInFunctionalCompo from './09HooksinFuncComp.jsx'
 import UseEffectHooksInFunctionalCompo from './10Useeffect.jsx'
 import UseLayoutEffect from './11UseLayout.jsx'
+import UseRefEffectHooksInFunctionalCompo from './12Useref.jsx'
+import UseCallbackHooksInFunctionalCompo from './13UseCallBack.jsx'
+import UseMemo from './14Usememo.jsx'
 
 
 import CustomC from './FCustomcard.jsx'
@@ -60,6 +63,18 @@ const FunComponentRoute = () => {
                 {
                     path: "UseLayoutEffect",
                     element: <UseLayoutEffect />
+                },
+                {
+                    path: "UseRefEffectHooksInFunctionalCompo",
+                    element: <UseRefEffectHooksInFunctionalCompo />
+                },
+                {
+                    path: "UseCallbackHooksInFunctionalCompo",
+                    element: <UseCallbackHooksInFunctionalCompo />
+                },
+                {
+                    path: "useMemo",
+                    element: <UseMemo />
                 },
             ]
         }

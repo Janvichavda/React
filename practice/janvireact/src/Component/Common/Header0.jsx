@@ -55,6 +55,9 @@ export default function App() {
               <Link className='nav-link' to="/examples">Examples</Link>
             </MDBNavbarItem>
             <MDBNavbarItem>
+              <Link className='nav-link' to="/ReactQA">ReactQA</Link>
+            </MDBNavbarItem>
+            <MDBNavbarItem>
               <MDBDropdown>
                 <MDBDropdownToggle tag='a' className='nav-link' role='button'>
                   Dropdown

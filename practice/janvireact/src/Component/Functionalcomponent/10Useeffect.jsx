@@ -38,7 +38,6 @@ const UseEffectHooksInFunctionalCompo = () => {
         console.log("called useEffect");
         fetch('https://fakestoreapi.com/products').then((res) => res.json()).then((result) => {
             console.log(result);
-
         })
         return () => {
             console.log("called return");
@@ -46,14 +45,14 @@ const UseEffectHooksInFunctionalCompo = () => {
     }, [])
     return (
         <>
+            <p> <b> In React, the useEffect hook is used to perform side effects in functional components. The second argument to useEffect is an array of dependencies. If this array is empty, the effect will only run once when the component mounts, similar to the behavior of componentDidMount in class components.</b></p>
+            <p><b>Call useEffect at the top level of your component to declare an Effect:</b></p>
             <p> <b>The following situations in functional components allow for the use of the useEffect hook to carry out operations (or side effects):</b> <br />
-
                 when a component is rendered (componentDidMount function in class-based components).
                 when a component undergoes an update (componentDidUpdate function in class-based components).
                 before a component is unmounted or removed (componentWillUnmount function in class-based components).</p>
             <p>How to write useEffect hooks in React <br />
                 <b>useEffect(()=>{
-
                 },[Dependency if any])</b>
             </p>
             <b> Assuming that the useEffect hook is active in our app, we can get this series of events to happen.</b>

@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 class StateClassComponentInReact extends Component {
     constructor(props) {
         super(props)
-        this.state = { stateData: "State Value" }
+        this.state = { stateData: "State Value", counter: 0, status: false }
         this.btnClickMethodInClass = this.btnClickMethodInClass.bind(this)
     }
 
@@ -34,6 +34,13 @@ class StateClassComponentInReact extends Component {
                 <p>Variable inside render : {data}</p>
                 <p>Datamember from Class : {this.dataMember}</p>
                 <p>State from Class : {this.state.stateData}</p>
+                <button onClick={() => { this.setState({ counter: this.state.counter - 1 }) }}>decrement</button> {this.state.counter}
+                <button onClick={() => { this.setState({ counter: this.state.counter + 1 }) }}>increment</button>
+                <br />
+
+                <button onClick={() => { this.setState({ status: !this.state.status }) }}>Change Status {JSON.stringify(this.state.status)}</button>
+
+                <br />
             </>
         );
     }

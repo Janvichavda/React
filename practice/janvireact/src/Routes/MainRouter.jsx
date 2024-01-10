@@ -6,6 +6,9 @@ import Home from "../Component/Pages/Home";
 import Login from "../Component/Pages/Login.jsx";
 import About from "../Component/Pages/AboutCompo"
 import Example from "../Component/Pages/ExampleCompo"
+import ReactQA from "../Component/Pages/ReactQA.jsx"
+import Listview from "../Component/ReactQA/List.jsx"
+import Counter from "../Component/ReactQA/Counter.jsx"
 import Contact from "../Component/Pages/Contact"
 import LoaderCompo from '../Component/Common/Loader.jsx';
 import HeaderCompo from '../Component/Common/Header0.jsx';
@@ -14,6 +17,7 @@ import React, { lazy, Suspense } from 'react';
 
 const ClassCompoj = lazy(() => { return import('../Component/ClassComponent/ClassCompoRoute.jsx') })
 const FunCompoj = lazy(() => { return import('../Component/Functionalcomponent/Functionalroute.jsx') })
+
 
 const router = createBrowserRouter([
     {
@@ -30,6 +34,20 @@ const router = createBrowserRouter([
     {
         path: "/contact",
         element: (<><HeaderCompo /><Contact /></>)
+    },
+    {
+        path: "/ReactQA",
+        element: (<><HeaderCompo /><ReactQA /></>),
+        children: [
+            {
+                path: "/ReactQA/listview",
+                element: (<><Listview /></>)
+            },
+            {
+                path: "/ReactQA/counter",
+                element: (<><Counter /></>)
+            },
+        ]
     }
     , {
         path: "/examples",
@@ -45,10 +63,8 @@ const router = createBrowserRouter([
                 element: (<Suspense janvi={<LoaderCompo />} ><FunCompoj
                 /></Suspense>),
             },
-
         ]
     },
-
 ]
 );
 
