@@ -24,7 +24,6 @@ export default function App() {
     <MDBNavbar expand='lg' light bgColor='light'>
       <MDBContainer fluid>
         <MDBNavbarBrand href='#'>Brand</MDBNavbarBrand>
-
         <MDBNavbarToggler
           aria-controls='navbarSupportedContent'
           aria-expanded='false'
@@ -56,6 +55,9 @@ export default function App() {
             </MDBNavbarItem>
             <MDBNavbarItem>
               <Link className='nav-link' to="/ReactQA">ReactQA</Link>
+            </MDBNavbarItem>
+            <MDBNavbarItem>
+              <Link className='nav-link' to="/api">Api</Link>
             </MDBNavbarItem>
             <MDBNavbarItem>
               <MDBDropdown>
